@@ -41,7 +41,8 @@ a {
 
 
 .login-container {
-    background-color: palevioletred;
+    background-color: #68638a;
+    color: #f9b911;
     padding: 30px;
     border-radius: 10px;
     width: 300px;
@@ -57,6 +58,11 @@ a {
     border-radius: 5px;
 }
 
+.login-text {
+    color: #f9b911;
+    font-weight: bold;
+}
+
 .login-container button {
     background-color: lightpink;
     color: black;
@@ -68,8 +74,18 @@ a {
     font-size: 1em;
 }
 
+.login-container input {
+    background-color: #ffffff;
+    color: #170b0b;
+}
+
+.login-container button {
+    background-color: #f9b911;
+    color: #170b0b;
+}
+
 .login-container button:hover {
-    background-color: hotpink;
+    background-color: #bb927a;
 }
 
 /* dashboard */
