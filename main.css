@@ -1,7 +1,44 @@
-
+/*
 body {
     background-color: deeppink;
 }
+*/
+.flex-container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    background-color: #68638AFF;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+a {
+    font-weight: bold;
+    color: black;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #f9b911;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
 
 .login-container {
     background-color: palevioletred;
@@ -33,4 +70,109 @@ body {
 
 .login-container button:hover {
     background-color: hotpink;
+}
+
+/* dashboard */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ffffff;
+    color: #8f83a9;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #68638a;
+    padding: 1.5rem;
+    border-right: 2px solid #bb927a;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #f9b911;
+}
+
+.main {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    border-top: 2px solid #bb927a;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.match-card {
+    background-color: #68638a;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 6px solid #bb927a;
+}
+
+.status {
+    background-color: #56e37e;
+    color: #170b0b;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status.FT {
+    background-color: #bb927a;
+    color: #170b0b;
+}
+
+.time {
+    color: #bb927a;
+    font-size: 0.9rem;
+}
+
+select {
+    background-color: #8f83a9;
+    color: #170b0b;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.filter-group {
+    margin-bottom: 1rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #170b0b;
+    font-weight: bold;
+}
+
+h2 {
+    color: #f9b911;
+}
+
+strong {
+    color: #f9b911;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* justér denne hvis du vil have det større eller mindre */
+    display: block;
+    margin: 0 auto 1rem auto;
 }

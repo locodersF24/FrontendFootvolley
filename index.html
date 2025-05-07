@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="flex-container">
+    <div class="flex-item-1"></div>
+    <div class="flex-item-2"></div>
+    <div class="flex-item-3"><a href="/login/index.html" class="btn">Login</a>
+    </div>
+</div>
+<div class="container">
+    <aside class="sidebar">
+        <img class="logo" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcopenhagenfootvolley.dk%2Fwp-content%2Fuploads%2F2023%2F08%2Fcopy-of-cfv-logo-9.png&f=1&nofb=1&ipt=301986561f8f38c6bfbbd0514d3319296a55b7468bf03ccd8512bb2d4b94e17d">
+        <h3>Filtre</h3>
+        <div class="filter-group">
+            <label for="region">Region</label>
+            <select id="region">
+                <option>Alle</option>
+                <option>Europa</option>
+                <option>Sydamerika</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="league">Liga</label>
+            <select id="league">
+                <option>Alle</option>
+                <option>Pro League</option>
+                <option>Beach Series</option>
+            </select>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="topbar">
+            <h2>Live Scores - Footvolley</h2>
+            <select id="daySelector">
+                <option>I dag</option>
+                <option>I morgen</option>
+            </select>
+        </div>
+
+        <div id="matches">
+            <!-- Dummy match -->
+            <div class="match-card">
+                <div>
+                    <div><strong>Team A</strong> vs <strong>Team B</strong></div>
+                    <div class="time">14:00</div>
+                </div>
+                <div class="status">LIVE</div>
+            </div>
+
+            <div class="match-card">
+                <div>
+                    <div><strong>Team C</strong> vs <strong>Team D</strong></div>
+                    <div class="time">12:00</div>
+                </div>
+                <div class="status FT">FT</div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
