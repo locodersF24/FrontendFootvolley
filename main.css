@@ -147,6 +147,12 @@ body {
     font-weight: bold;
 }
 
+#error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 .status.FT {
     background-color: #bb927a;
     color: #170b0b;
