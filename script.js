@@ -1,5 +1,10 @@
- // fetch-kald
-    function renderMatches(matches) {
+export default run;
+
+function run() {
+    // fetch-kald
+}
+
+function renderMatches(matches) {
     const container = document.getElementById("matches");
     container.innerHTML = "";
     matches.forEach(match => {
@@ -13,5 +18,5 @@
           <div class="status ${match.status}">${match.status}</div>
         `;
     container.appendChild(div);
-});
+    });
 }

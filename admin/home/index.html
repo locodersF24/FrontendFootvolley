@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin home page</title>
+    <link rel="stylesheet" href="../../main.css">
+    <script type="module">
+        import run from "./script.js";
+        run();
+    </script>
+</head>
+<body>
+
+<button type="button" id="logout"></button>
+
+<h1>Create club</h1>
+<form id="createClub">
+    <label>New club username: <input type="email" id="username" required></label>
+    <label>New password: <input type="password" id="password1" required></label>
+    <label>Repeat password: <input type="password" id="password2" required></label>
+    <p id="error-message"></p>
+    <p id="message" style="color: green"></p>
+    <button type="submit">Create new login</button>
+</form>
+
+</body>
+</html>
