@@ -12,17 +12,20 @@ const backendBaseUrl = "http://localhost:8080";
 const endpoints = new Map()
     .set("login", {method: "POST", path: "/auth/token"})
     .set("who", {method: "GET", path: "/auth/me"})
-    .set("createClub", {method: "POST", path: "/admin/register"})
-    .set("clubDummy", {method: "GET", path: "/club/hello"})
+    .set("createClub", {method: "POST", path: "/api/club"})
+    .set("getOwnClub", {method: "GET", path: "/api/club"})
+    .set("getClubById", {method: "GET", path: "/api/club/{id}"})
     ;
 
 /**
  * Get backend url from description.
  * @param {string} description - Frontend description of backend endpoint.
+ * @param {string|Number} id - Optional. Set if path has id.
  * @return {string}
  */
-export function getUrl(description) {
-    return backendBaseUrl + endpoints.get(description).path;
+export function getUrl(description, id = undefined) {
+    const url = backendBaseUrl + endpoints.get(description).path;
+    return id === undefined ? url : url.replace("{id}", id); // Does this work? (regex problems)
 }
 
 /**
@@ -31,7 +34,7 @@ export function getUrl(description) {
  * @param {Object} body - Optional
  * @return {Promise<Response>}
  */
-export function fetchWithToken(description, body= undefined) {
+export function fetchWithToken(description, body = undefined) {
     const url = getUrl(description);
     const method = endpoints.get(description).method;
     const auth = "Bearer " + sessionStorage.getItem("token");

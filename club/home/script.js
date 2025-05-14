@@ -5,7 +5,7 @@ export default run;
 function run() {
     redirectIfNotLoggedInAs("CLUB");
     finishLogoutButton();
-    fetchWithToken("clubDummy").then(response => response.text()).then(text => {
-        document.querySelector("p").innerHTML = text;
+    fetchWithToken("getOwnClub").then(response => response.json()).then(club => {
+        document.querySelector("p").innerText = "Hello " + club.name;
     });
 }
