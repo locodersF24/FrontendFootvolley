@@ -7,7 +7,9 @@ function run() {
     finishLogoutButton();
     document.querySelector("form#createClub").addEventListener("submit", event => {
         event.preventDefault();
-        const username = document.querySelector("#username").value;
+        const email = document.querySelector("#email").value;
+        const firstName = document.querySelector("#firstName").value;
+        const lastName = document.querySelector("#lastName").value;
         const password1 = document.querySelector("#password1").value;
         const password2 = document.querySelector("#password2").value;
         const p = document.querySelector("p#error-message");
@@ -16,16 +18,16 @@ function run() {
             return;
         }
         const body = {
-            username: username,
+            email: email,
+            firstName: firstName,
+            lastName: lastName,
             password: password1
         }
-        fetchWithToken("createClub", body).then(response => {
+        fetchWithToken("createClub", body).then(async response => {
             if (response.status === 201) {
                 document.querySelector("p#message").innerText = "Club created!";
-            } else if (response.status === 409) {
-                p.innerText = "Username already exists.";
             } else {
-                p.innerText = "Unknown error.";
+                p.innerText = await response.text();
             }
         });
     });

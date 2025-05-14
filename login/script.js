@@ -10,7 +10,7 @@ async function login(event) { // The async keyword in JavaScript is used to decl
     event.preventDefault(); // Prevent page reload
 
     // Get the latest values from input fields
-    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     const url = getUrl("login");
@@ -18,7 +18,7 @@ async function login(event) { // The async keyword in JavaScript is used to decl
     const response = await fetch(url, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({username: username, password: password})
+        body: JSON.stringify({email: email, password: password})
     });
 
     // If the login is successful (HTTP status 2xx)
