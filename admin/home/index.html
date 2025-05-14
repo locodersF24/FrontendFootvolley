@@ -10,20 +10,28 @@
     </script>
 </head>
 <body>
+<div class="flex-container">
+    <div class="flex-item-1"></div>
+    <div class="flex-item-2"></div>
+    <div class="flex-item-3"><button class="btn" type="button" id="logout"></button>
+    </div>
+</div>
 
-<button type="button" id="logout"></button>
+<h1 style="color: black; align-self: center;">Welcome to your profile, Admin!</h1>
 
+<div class="create-container">
 <h1>Create club</h1>
 <form id="createClub">
-    <label>New club email: <input type="email" id="email" required></label>
-    <label>Contact first name: <input type="text" id="firstName" required></label>
-    <label>Contact last name: <input type="text" id="lastName" required></label>
-    <label>New password: <input type="password" id="password1" required></label>
-    <label>Repeat password: <input type="password" id="password2" required></label>
+    <label>New club email: <input type="email" id="email" required placeholder="cph@footvolley.dk"></label> <br>
+    <label>Contact first name: <input type="text" id="firstName" required placeholder="Tobias"></label><br>
+    <label>Contact last name: <input type="text" id="lastName" required placeholder="Barbosa"></label><br>
+    <label>New password: <input type="password" id="password1" required placeholder="password123"></label><br>
+    <label>Repeat password: <input type="password" id="password2" required placeholder="password123"></label><br>
     <p id="error-message"></p>
     <p id="message" style="color: green"></p>
     <button type="submit">Create new login</button>
 </form>
+</div>
 
 </body>
 </html>
