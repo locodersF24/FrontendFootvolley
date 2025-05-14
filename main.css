@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: start;
     justify-content: space-between;
-    background-color: #68638AFF;
+    background-color: #001878;
     padding-top: 20px;
     padding-left: 80px;
     padding-right: 20px;
@@ -16,7 +16,7 @@ body {
 
 a {
     font-weight: bold;
-    color: black;
+    color: lightblue;;
 }
 
 .btn {
@@ -25,7 +25,7 @@ a {
 }
 
 .btn:hover {
-    background-color: #f9b911;
+    background-color: lightblue;
 }
 
 .btn {
@@ -41,8 +41,8 @@ a {
 
 
 .login-container {
-    background-color: #68638a;
-    color: #f9b911;
+    background-color: #001878;
+    color: lightblue;
     padding: 30px;
     border-radius: 10px;
     width: 300px;
@@ -59,33 +59,43 @@ a {
 }
 
 .login-text {
-    color: #f9b911;
+    color: white;
     font-weight: bold;
 }
 
 .login-container button {
-    background-color: lightpink;
+    width: 60%;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-top: 10px;
+    background-color: #001878;
     color: black;
     border: none;
     padding: 10px;
-    width: 100%;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    place-content: center;
 }
 
 .login-container input {
     background-color: #ffffff;
     color: #170b0b;
+    place-content: center;
+    width: 90%;
+    margin-left: 10px;
 }
 
 .login-container button {
-    background-color: #f9b911;
-    color: #170b0b;
+    background-color: lightblue;
+    color: black;
 }
 
 .login-container button:hover {
-    background-color: #bb927a;
+    background-color: lightblue;
+    color: black;
+    background-color: white;
+    color: black;
 }
 
 /* dashboard */
@@ -93,7 +103,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-color: #ffffff;
-    color: #8f83a9;
+    color: lightblue;
 }
 
 .container {
@@ -103,21 +113,21 @@ body {
 
 .sidebar {
     width: 220px;
-    background-color: #68638a;
+    background-color: #001878;
+    border-right: 2px solid #0a0401;
     padding: 1.5rem;
-    border-right: 2px solid #bb927a;
 }
 
 .sidebar h3 {
     margin-top: 0;
-    color: #f9b911;
+    color: lightblue;
 }
 
 .main {
     flex: 1;
     padding: 1rem;
     overflow-y: auto;
-    border-top: 2px solid #bb927a;
+    border-top: 2px solid #070300;
 }
 
 .topbar {
@@ -128,14 +138,14 @@ body {
 }
 
 .match-card {
-    background-color: #68638a;
+    background-color: #001878;
+    border-left: 6px solid black;
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 6px solid #bb927a;
 }
 
 .status {
@@ -159,12 +169,13 @@ body {
 }
 
 .time {
-    color: #bb927a;
-    font-size: 0.9rem;
+    color: lightblue;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 select {
-    background-color: #8f83a9;
+    background-color: white;
     color: #170b0b;
     border: none;
     padding: 0.5rem;
@@ -179,16 +190,16 @@ select {
 .filter-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #170b0b;
+    color: white;
     font-weight: bold;
 }
 
 h2 {
-    color: #f9b911;
+    color: black;
 }
 
 strong {
-    color: #f9b911;
+    color: white;
 }
 
 .logo {
@@ -197,4 +208,27 @@ strong {
     max-height: 200px; /* justér denne hvis du vil have det større eller mindre */
     display: block;
     margin: 0 auto 1rem auto;
+}
+
+footer {
+    font-family: Arial, sans-serif;
+    background-color: #001878;
+    color: white;
+    padding: 5px;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+footer p {
+    font-style: oblique;
+    text-align: center;
 }
