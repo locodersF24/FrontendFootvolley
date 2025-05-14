@@ -10,6 +10,8 @@ function run() {
         const email = document.querySelector("#email").value;
         const firstName = document.querySelector("#firstName").value;
         const lastName = document.querySelector("#lastName").value;
+        const clubName = document.querySelector("#clubName").value;
+        const city = document.querySelector("#city").value;
         const password1 = document.querySelector("#password1").value;
         const password2 = document.querySelector("#password2").value;
         const p = document.querySelector("p#error-message");
@@ -21,6 +23,10 @@ function run() {
             email: email,
             firstName: firstName,
             lastName: lastName,
+            clubName: clubName,
+            established: "2025",
+            country: "DK",
+            city: city,
             password: password1
         }
         fetchWithToken("createClub", body).then(async response => {
