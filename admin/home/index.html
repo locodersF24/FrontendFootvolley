@@ -29,9 +29,41 @@
     <label>Repeat password: <input type="password" id="password2" required placeholder="password123"></label><br>
     <p id="error-message"></p>
     <p id="message" style="color: green"></p>
-    <button type="submit">Create new login</button>
+    <button class="btn" type="submit">Create new login</button>
 </form>
 </div>
+<br>
+
+<div class="create-container">
+    <h1>Create tournament</h1>
+    <form id="createTournament">
+        <label>City of tournament: <input type="text" id="city" required placeholder="Barcelona"></label> <br>
+        <label>Full address: <input type="text" id="location" required placeholder="Paseo Maritimo Barceloneta, 14, Barcelona, ES 08003"></label><br>
+        <label>Points at stake: <input type="number" id="pointsAtStake" required placeholder="10"></label><br>
+        <label>Qualification start date: <input type="date" id="qualificationStartDate" required placeholder="password123"></label><br>
+        <label>Qualification end date: <input type="date" id="qualificationEndDate" required placeholder="password123"></label><br>
+        <label>Finals start date: <input type="date" id="finalsStartDate" required placeholder="password123"></label><br>
+        <label>Finals end date: <input type="date" id="finalsEndDate" required placeholder="password123"></label><br>
+        <label>Partners: <input type="text" id="partners" required placeholder="Bolao"></label><br>
+        <label>Price in the lowest monetary unit (ex. cents for Euros):<input type="number" id="prizeMoney" required placeholder="10"></label><br>
+        <label>Currency: <input type="text" id="currency" required placeholder="Euros"></label><br>
+
+        <p id="message2" style="color: green"></p>
+        <button class="btn" type="submit">Create new tournament</button>
+    </form>
+</div>
+
+<div class="create-container">
+    <h1>Create partner</h1>
+    <form id="createPartner">
+        <label>Name: <input type="text" id="name" required placeholder="Bolao"></label> <br>
+        <label>Logo URL: <input type="text" id="logoBlobUrl" required placeholder="https://images.squarespace-cdn.com/content/v1/6761621cb73789168906a9aa/828f8489-e0ed-49cb-8c39-02c3e21db33a/FLC+Logo+white.png?format=1500w"></label><br>
+
+        <p id="message3" style="color: green"></p>
+        <button class="btn" type="submit">Create new partner</button>
+    </form>
+</div>
+
 
 </body>
 </html>
