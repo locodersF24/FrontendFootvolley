@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new club account</title>
+    <link rel="stylesheet" href="../../../main.css">
+    <script type="module">
+        import run from "./script.js";
+        run();
+    </script>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item-1"></div>
+    <div class="flex-item-2"></div>
+    <div class="flex-item-3"><button class="btn" type="button" id="logout"></button>
+    </div>
+</div>
+
+<div class="create-container">
+<h1>Create new club account</h1>
+<form>
+    <h2>Club information</h2>
+    <label>Name: <input type="text" id="clubName" required></label>
+    <label>Established: <input type="number" min="1000" max="9999" id="established" placeholder="Select year." required></label>
+    <label>Country: <select class="country" required></select></label>
+    <label class="hideSelectCity">City: <select class="city" required></select></label>
+    <label class="hideNewCity">New city: <input type="text" id="cityName"></label>
+    <h2>Contact person</h2>
+    <label>Email: <input type="email" id="email" placeholder="This will be the club username." required></label>
+    <label>First name: <input type="text" id="firstName" required></label>
+    <label>Last name: <input type="text" id="lastName" required></label>
+    <h2>Club password</h2>
+    <label>Create password: <input type="password" id="password" required></label>
+    <label>Confirm password: <input type="password" id="confirmPassword" required></label>
+    <p class="error-message"></p>
+    <button class="btn" type="submit">Create new login</button>
+</form>
+</div>
+
+</body>
+</html>

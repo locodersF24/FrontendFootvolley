@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new tournament</title>
+    <link rel="stylesheet" href="../../../main.css">
+    <script type="module">
+        import run from "./script.js";
+        run();
+    </script>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item-1"></div>
+    <div class="flex-item-2"></div>
+    <div class="flex-item-3"><button class="btn" type="button" id="logout"></button>
+    </div>
+</div>
+
+<div class="create-container">
+    <h1>Create new tournament</h1>
+    <form id="createTournament">
+        <label>League year: <input type="number" min="1000" max="9999" id="year" required></label>
+        <label>League category: <select id="category"></select></label>
+        <label>Host: <select id="host"><option></option></select></label> <!-- skal vælge -->
+        <label id="hideSelectCountry" style="display: none">Country: <select class="country"></select></label>
+        <label class="hideSelectCity">City: <select class="city" required></select></label>
+        <label class="hideNewCity">New city: <input type="text" id="cityName"></label>
+        <label>Describe location: <input type="text" id="location"></label>
+        <label>Points at stake: <select id="pointsAtStake"><option value="1000">1000</option><option value="500">500</option><option value="100">100</option></select></label> <!-- Warning: Hardcoded -->
+        <label>Qualification start date: <input type="date" id="qualificationStartDate"></label>
+        <label>Qualification end date: <input type="date" id="qualificationEndDate"></label>
+        <label>Finals start date: <input type="date" id="finalsStartDate" required></label>
+        <label>Finals end date: <input type="date" id="finalsEndDate" required></label>
+        <p class="error-message"></p>
+        <button class="btn" type="submit">Create new tournament</button>
+    </form>
+</div>
+
+</body>
+</html>
