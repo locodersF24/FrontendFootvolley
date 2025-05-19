@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update city</title>
+    <link rel="stylesheet" href="../../../../main.css">
+    <script type="module">
+        import run from "./script.js";
+        run();
+    </script>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-item-1"></div>
+    <div class="flex-item-2"></div>
+    <div class="flex-item-3"><button class="btn" type="button" id="logout"></button>
+    </div>
+</div>
+
+<div class="create-container">
+<h1>Update city</h1>
+<form id="changeInfo">
+    <h2>Change information of current city</h2>
+    <p>In case the city name is misspelled, vague etc.</p>
+    <label>Country: <select id="changeCountry" required></select></label>
+    <label>City name: <input type="text" id="changeName" required></label>
+    <p class="error-message" id="errorChangeInfo"></p>
+    <button class="btn" type="submit">Save new information</button>
+</form>
+<form id="changeCity">
+    <h2>Change location to new city</h2>
+    <p>In case of relocating to a new city.</p>
+    <label>Country: <select class="country" required></select></label>
+    <label class="hideSelectCity">City: <select class="city" required></select></label>
+    <label class="hideNewCity">New city: <input type="text" id="cityName"></label>
+    <p class="error-message" id="errorChangeCity"></p>
+    <button class="btn" type="submit">Save new location</button>
+</form>
+</div>
+
+</body>
+</html>

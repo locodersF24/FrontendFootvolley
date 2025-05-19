@@ -1,4 +1,4 @@
-import {getUrl, fetchWithToken} from "../global.js";
+import {getEndpoint, fetchWithToken} from "../global.js";
 
 export default run;
 
@@ -13,10 +13,10 @@ async function login(event) { // The async keyword in JavaScript is used to decl
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    const url = getUrl("login");
+    const endpoint = getEndpoint("login");
 
-    const response = await fetch(url, {
-        method: 'POST',
+    const response = await fetch(endpoint.url, {
+        method: endpoint.method,
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({email: email, password: password})
     });
@@ -25,15 +25,12 @@ async function login(event) { // The async keyword in JavaScript is used to decl
     if (response.ok) {
         const token = await response.text();
         sessionStorage.setItem("token", token);
-        fetchWithToken("who").then(response => response.json()).then(user => {
+        fetchWithToken(getEndpoint("who")).then(response => response.json()).then(user => {
             sessionStorage.setItem("role", user.role);
-            if (user.role === "ADMIN") {
-                window.location.assign("/admin/home");
-            } else if (user.role === "CLUB") {
-                window.location.assign("/club/home");
-            } else {
-                showErrorMessage("Login successful with unknown type.");
+            if (user.role === "CLUB") {
+                sessionStorage.setItem("clubId", user.clubId);
             }
+            window.location.assign("/home");
         });
     } else {
         // If the login fails, show an error message
