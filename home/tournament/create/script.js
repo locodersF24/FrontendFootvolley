@@ -13,14 +13,14 @@ function run() {
     finishLogoutButton();
     fillCountriesAndCities();
     document.querySelector("select.country").remove(0);
-    fillCategoriesAndClubs();
+    fillCategoriesAndClubsAndPointsAtStake();
     document.querySelector("#host").addEventListener("change", preselectCountryAndCity);
     document.querySelector("form").addEventListener("submit", sendNewTournament);
 }
 
 const clubMap = new Map();
 
-function fillCategoriesAndClubs() {
+function fillCategoriesAndClubsAndPointsAtStake() {
     fetch(getEndpoint("getAllCategories").url).then(response => response.json()).then(categories => {
         const selectCategory = document.querySelector("#category");
         categories.forEach(category => {
@@ -28,6 +28,15 @@ function fillCategoriesAndClubs() {
             option.value = category;
             option.innerText = category;
             selectCategory.append(option);
+        });
+    });
+    fetch(getEndpoint("getAllPointsAtStake").url).then(response => response.json()).then(pointsAStake => {
+        const selectPointsAtStake = document.querySelector("#pointsAtStake");
+        pointsAStake.forEach(pas => {
+            const option = document.createElement("option");
+            option.value = pas.winner;
+            option.innerText = pas.winner;
+            selectPointsAtStake.append(option);
         });
     });
     fetch(getEndpoint("getAllClubs").url).then(response => response.json()).then(clubs => {
@@ -57,6 +66,10 @@ function sendNewTournament(event) {
     event.preventDefault();
     const errorMessage = document.querySelector("p.error-message");
     const hostId = document.querySelector("#host").value;
+    if (hostId === "none") {
+        errorMessage.innerText = "Host is required for creating a new tournament.";
+        return;
+    }
     const host = clubMap.get("clubId" + hostId);
     const cityName = document.querySelector("#cityName").value;
     const tournament = {

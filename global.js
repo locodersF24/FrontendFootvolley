@@ -22,6 +22,7 @@ const endpoints = new Map()
     .set("clubCreateNewCity", {method: "POST", url: "/api/clubs/city"})
     .set("clubReplaceCityWithAnotherExistingCity", {method: "PUT", url: "/api/clubs/city/{id}"})
     .set("getAllCategories", {method: "GET", url: "/api/leagues/categories"})
+    .set("getAllPointsAtStake", {method: "GET", url: "/api/tournaments/points"})
     .set("createTournament", {method: "POST", url: "/api/tournaments"})
     ;
 
