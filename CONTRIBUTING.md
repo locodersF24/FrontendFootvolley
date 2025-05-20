@@ -11,6 +11,7 @@ Whether you're fixing a bug, adding a feature, or improving documentation, your 
 2. **Create a new branch**:  
    ```bash  
    git checkout -b feature/your-feature-name
+   ```
 3. **Make your changes**
 4. **Commit with a clear message** (see naming convention below)
 5. **Push to your fork**
@@ -36,8 +37,9 @@ This project uses no build tools or frontend frameworks. You can run it directly
 - Open `index.html` directly in your browser
 
 #### Option 2: Use a Local Server (Recommended for backend API interaction)
-bash placeholder  
+```bash  
 npx live-server
+```
 
 > Make sure your backend server is running to enable data interaction.
 
